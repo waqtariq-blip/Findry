@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="../exports/png/findry-favicon-32.png">
+<!-- hreflang — production build must serve these as real URLs:
+  <link rel="alternate" hreflang="en"        href="https://findry.co/en/terms/">
+  <link rel="alternate" hreflang="ur"        href="https://findry.co/ur/terms/">
+  <link rel="alternate" hreflang="x-default" href="https://findry.co/en/terms/">
+-->
+<script src="./i18n.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #fff; }
+  ::selection { background: #12A594; color: #fff; }
+  .fd-prose { font-family: system-ui, "Segoe UI", "Helvetica Neue", sans-serif; }
+  a { text-decoration: none; color: inherit; }
+  [dir="rtl"] { font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', sans-serif !important; }
+  [dir="rtl"] .fd-prose { font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', sans-serif !important; line-height: 1.85 !important; }
+  [dir="rtl"] .fd-h { font-family: 'Noto Nastaliq Urdu', serif !important; line-height: 2.0 !important; }
+  .fd-num { unicode-bidi: isolate; font-family: 'Space Grotesk', sans-serif; }
+  [dir="rtl"] .fd-num { direction: ltr; unicode-bidi: isolate; font-family: 'Space Grotesk', sans-serif !important; }
+  bdi { unicode-bidi: isolate; }
+  .fd-doc h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; color: #0E2138; margin: 40px 0 12px; }
+  .fd-doc p { font-family: system-ui, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.7; color: #4C5563; margin: 0 0 14px; }
+  .fd-doc ul { margin: 0 0 14px; padding-inline-start: 20px; }
+  .fd-doc li { font-family: system-ui, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.7; color: #4C5563; margin-bottom: 6px; }
+  .fd-doc a { color: #12A594; font-weight: 500; }
+  @media (max-width: 768px) {
+    .fd-nav-links { display: none !important; }
+    .fd-doc-hero { padding: 36px 0 !important; }
+    .fd-doc-hero h1 { font-size: 32px !important; }
+  }
+</style>
+</helmet>
+
+<div dir="{{ dir }}" lang="{{ lang }}" style="font-family:'Space Grotesk',sans-serif; color:#0E2138; background:#fff;">
+
+  <!-- NAV -->
+  <header ref="{{ navRef }}" style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid #EAEBEE; transition:box-shadow .25s;">
+    <nav style="max-width:1160px; margin:0 auto; padding:16px 40px; display:flex; align-items:center; justify-content:space-between;">
+      <a href="Findry Home.dc.html" style="display:flex; align-items:center; gap:11px; flex-shrink:0;">
+        <svg viewBox="0 0 120 120" width="30" height="30" style="display:block; flex-shrink:0;"><rect x="34" y="18" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="34" y="36" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="34" y="54" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="34" y="72" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="34" y="90" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="52" y="18" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="70" y="18" width="16" height="16" rx="3.5" fill="#12A594"></rect><rect x="52" y="54" width="16" height="16" rx="3.5" fill="#0E2138"></rect></svg>
+        <span class="fd-num" style="font-weight:600; letter-spacing:-0.03em; font-size:22px; color:#0E2138;">F<span style="position:relative; display:inline-block;">ı<span style="position:absolute; left:50%; transform:translateX(calc(-50% + 0.02em)); top:0.30em; width:0.155em; height:0.155em; background:#0E2138; border-radius:0.034em;"></span></span>ndry</span>
+      </a>
+      <div class="fd-nav-links" style="display:flex; align-items:center; gap:26px;">
+        <a href="Findry Local SEO.dc.html" class="fd-h" style="font-size:14.5px; color:#3A4150; font-weight:500; white-space:nowrap;" style-hover="color:#12A594;">{{ t.navLocalSeo }}</a>
+        <a href="Findry Case Studies.dc.html" class="fd-h" style="font-size:14.5px; color:#3A4150; font-weight:500; white-space:nowrap;" style-hover="color:#12A594;">{{ t.navCases }}</a>
+        <a href="Findry Pricing.dc.html" class="fd-h" style="font-size:14.5px; color:#3A4150; font-weight:500; white-space:nowrap;" style-hover="color:#12A594;">{{ t.navPricing }}</a>
+        <div style="display:flex; align-items:center; background:#F1F2F4; border-radius:999px; padding:3px;">
+          <button onClick="{{ setEn }}" style="{{ enStyle }}">EN</button>
+          <button onClick="{{ setUr }}" style="{{ urStyle }}">اردو</button>
+        </div>
+        <a href="Findry Book a Call.dc.html" class="fd-h" style="font-size:14.5px; color:#fff; font-weight:600; background:#0E2138; padding:11px 19px; border-radius:9px; white-space:nowrap;" style-hover="background:#16304f;">{{ t.bookCall }}</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ENGLISH-ONLY NOTICE (shown in Urdu mode) -->
+  <sc-if value="{{ isUr }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#FFFBEB; border-bottom:1px solid #F0E6B0;">
+      <div style="max-width:760px; margin:0 auto; padding:11px 40px; display:flex; align-items:center; gap:10px;">
+        <span class="fd-num" style="font-size:15px; flex-shrink:0;">ℹ️</span>
+        <p class="fd-prose" style="margin:0; font-size:14px; color:#7A5A00; line-height:1.5; font-family:'Noto Naskh Arabic', sans-serif;">یہ صفحہ صرف انگریزی میں دستیاب ہے۔ <em style="font-style:normal; color:#9A7A20;">(This page is available in English only.)</em></p>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- DOC HEADER -->
+  <section class="fd-doc-hero" style="background:#F6F7F9; border-bottom:1px solid #EAEBEE; padding:56px 0;">
+    <div style="max-width:760px; margin:0 auto; padding:0 40px;">
+      <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; color:#12A594; background:#E2F4F1; padding:7px 13px; border-radius:999px; white-space:nowrap; font-family:'Space Grotesk',sans-serif;">LEGAL</span>
+      <h1 style="margin:18px 0 0; font-size:44px; line-height:1.05; font-weight:700; letter-spacing:-0.03em; font-family:'Space Grotesk',sans-serif;">Terms of Service</h1>
+      <p class="fd-prose" style="margin:12px 0 0; font-size:15px; color:#8A93A3;">Last updated 16 June 2026</p>
+    </div>
+  </section>
+
+  <!-- DOC BODY -->
+  <section style="background:#fff; padding:56px 0 80px;">
+    <div class="fd-doc" style="max-width:760px; margin:0 auto; padding:0 40px;">
+      <p style="font-size:17px; color:#3A4150;">These terms govern your use of <bdi>findry.co</bdi> and the local-visibility services provided by Findry. By booking a call, requesting a free check, or engaging us, you agree to them. We've kept them straightforward.</p>
+
+      <h2>1. The services</h2>
+      <p>We provide local SEO setup, <bdi>Google Business Profile</bdi> optimisation, and ongoing management as described on our website. The specific scope for your business is confirmed in writing before work begins.</p>
+
+      <h2>2. Packages &amp; payment</h2>
+      <p>Each plan (<strong>Entry</strong>, <strong>Growth</strong>, <strong>Basic</strong>) has a one-time setup fee and a monthly management fee, as shown on our Pricing page. The setup fee is invoiced before work begins; monthly management is billed monthly in advance. Prices are in <bdi>PKR</bdi> and may vary by business size; any variation is confirmed before you commit.</p>
+
+      <h2>3. Cancellation</h2>
+      <p>Monthly management is month-to-month. You may cancel at any time with 30 days notice; we'll complete the current billing period and hand over your profiles and assets. One-time setup fees are non-refundable once work has begun.</p>
+
+      <h2>4. What we can and can't promise</h2>
+      <p>We commit to doing the agreed work to a professional standard. Because search rankings depend on factors outside our control — <bdi>Google</bdi>'s algorithms, your competitors, your responsiveness and review volume — <strong>we do not guarantee specific rankings or results</strong>. We do commit to transparency: you'll see real progress in your monthly report.</p>
+
+      <h2>5. Your responsibilities</h2>
+      <ul>
+        <li>Give us timely access to your <bdi>Google Business Profile</bdi>, website and relevant accounts.</li>
+        <li>Provide accurate business information.</li>
+        <li>Respond to reasonable requests so work isn't delayed.</li>
+      </ul>
+
+      <h2>6. Acceptable practices</h2>
+      <p>We follow <bdi>Google</bdi>'s guidelines. We do not buy fake reviews, create fake listings, or use tactics that put your business at risk. We expect clients not to ask us to.</p>
+
+      <h2>7. Liability</h2>
+      <p>To the extent permitted by law, our liability for any claim relating to the services is limited to the fees you paid us in the three months before the claim arose.</p>
+
+      <h2>8. Contact</h2>
+      <p>Questions about these terms? Email <a href="mailto:hello@findry.co"><bdi>hello@findry.co</bdi></a>. Findry is based in Karachi, Pakistan.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0E1116; color:#fff; padding:48px 0 30px;">
+    <div style="max-width:1160px; margin:0 auto; padding:0 40px; display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; align-items:center;">
+      <div style="display:flex; align-items:center; gap:11px;">
+        <svg viewBox="0 0 120 120" width="26" height="26" style="flex-shrink:0;"><rect x="34" y="18" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="34" y="36" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="34" y="54" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="34" y="72" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="34" y="90" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="52" y="18" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="70" y="18" width="16" height="16" rx="3.5" fill="#1FC9B0"></rect><rect x="52" y="54" width="16" height="16" rx="3.5" fill="#fff"></rect></svg>
+        <span class="fd-num" style="font-weight:600; letter-spacing:-0.03em; font-size:19px; color:#fff;">F<span style="position:relative; display:inline-block;">ı<span style="position:absolute; left:50%; transform:translateX(calc(-50% + 0.02em)); top:0.30em; width:0.155em; height:0.155em; background:#fff; border-radius:0.034em;"></span></span>ndry</span>
+      </div>
+      <span class="fd-num fd-prose" style="font-size:13px; color:#6B7486;">© 2026 Findry · findry.co · Karachi, Pakistan</span>
+      <div style="display:flex; gap:24px;">
+        <a href="Findry Privacy.dc.html" class="fd-prose" style="font-size:13px; color:#6B7486;" style-hover="color:#C4CBD6;">{{ t.privacy }}</a>
+        <a href="Findry Terms.dc.html" class="fd-prose" style="font-size:13px; color:#C4CBD6;">{{ t.terms }}</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { lang: (() => { try { return localStorage.getItem('findry-lang') || 'en'; } catch(e) { return 'en'; } })() };
+
+  T = {
+    en: { navLocalSeo: 'Local SEO', navCases: 'Case studies', navPricing: 'Pricing', bookCall: 'Book a call', privacy: 'Privacy', terms: 'Terms' },
+    ur: { navLocalSeo: 'لوکل ایس ای او', navCases: 'کیس اسٹڈیز', navPricing: 'قیمتیں', bookCall: 'کال بُک کریں', privacy: 'پرائیویسی', terms: 'شرائط' }
+  };
+
+  setLang(lang) {
+    if (window.FindryI18n) window.FindryI18n.setLang(lang);
+    this.setState({ lang });
+  }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const t = this.T[lang] || this.T.en;
+    const isUr = lang === 'ur';
+    const langBtn = { border: 'none', cursor: 'pointer', fontSize: '12.5px', fontWeight: 600, padding: '6px 13px', borderRadius: '999px', transition: 'all .2s', fontFamily: "'Space Grotesk', sans-serif" };
+    return {
+      t,
+      dir: isUr ? 'rtl' : 'ltr',
+      lang,
+      isUr,
+      setEn: () => this.setLang('en'),
+      setUr: () => this.setLang('ur'),
+      enStyle: !isUr
+        ? { ...langBtn, background: '#fff', color: '#0E2138', boxShadow: '0 1px 2px rgba(14,33,56,0.12)' }
+        : { ...langBtn, background: 'transparent', color: '#6A7180' },
+      urStyle: isUr
+        ? { ...langBtn, background: '#fff', color: '#0E2138', boxShadow: '0 1px 2px rgba(14,33,56,0.12)', fontFamily: "'Noto Naskh Arabic', sans-serif" }
+        : { ...langBtn, background: 'transparent', color: '#6A7180', fontFamily: "'Noto Naskh Arabic', sans-serif" },
+      navRef: (el) => { this._nav = el; }
+    };
+  }
+
+  componentDidMount() {
+    if (window.FindryI18n) {
+      window.FindryI18n.applyDoc(this.state.lang);
+      if (this.state.lang === 'ur') window.FindryI18n.ensureUrduFonts();
+    }
+    document.title = 'Terms of Service | Findry';
+    const onScroll = () => {
+      if (this._nav) this._nav.style.boxShadow = window.scrollY > 8 ? '0 6px 24px -10px rgba(14,33,56,0.18)' : 'none';
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    this._onScroll = onScroll; onScroll();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState && prevState.lang !== this.state.lang && window.FindryI18n) {
+      window.FindryI18n.applyDoc(this.state.lang);
+      if (this.state.lang === 'ur') window.FindryI18n.ensureUrduFonts();
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+}
+</script>
+</body>
+</html>

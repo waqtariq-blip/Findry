@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="../exports/png/findry-favicon-32.png">
+<script src="./i18n.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #fff; }
+  ::selection { background: #12A594; color: #fff; }
+  .fd-prose { font-family: system-ui, "Segoe UI", "Helvetica Neue", sans-serif; }
+  a { text-decoration: none; color: inherit; }
+  [dir="rtl"] { font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', sans-serif !important; }
+  [dir="rtl"] .fd-prose { font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', sans-serif !important; line-height: 1.8 !important; }
+  [dir="rtl"] .fd-h { font-family: 'Noto Nastaliq Urdu', serif !important; line-height: 1.9 !important; }
+  .fd-num { unicode-bidi: isolate; }
+  [dir="rtl"] .fd-num { font-family: 'Space Grotesk', sans-serif !important; direction: ltr; unicode-bidi: isolate; }
+</style>
+</helmet>
+
+<div dir="{{ dir }}" lang="{{ lang }}" style="font-family:'Space Grotesk',sans-serif; color:#0E2138; background:#fff;">
+
+  <!-- NAV -->
+  <header ref="{{ navRef }}" style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid #EAEBEE; transition:box-shadow .25s;">
+    <nav style="max-width:1160px; margin:0 auto; padding:16px 40px; display:flex; align-items:center; justify-content:space-between;">
+      <a href="Findry Home.dc.html" style="display:flex; align-items:center; gap:11px;">
+        <svg viewBox="0 0 120 120" width="30" height="30" style="display:block; flex-shrink:0;"><rect x="34" y="18" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="34" y="36" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="34" y="54" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="34" y="72" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="34" y="90" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="52" y="18" width="16" height="16" rx="3.5" fill="#0E2138"></rect><rect x="70" y="18" width="16" height="16" rx="3.5" fill="#12A594"></rect><rect x="52" y="54" width="16" height="16" rx="3.5" fill="#0E2138"></rect></svg>
+        <span class="fd-num" style="font-family:'Space Grotesk',sans-serif; font-weight:600; letter-spacing:-0.03em; font-size:22px; color:#0E2138;">F<span style="position:relative; display:inline-block;">ı<span style="position:absolute; left:50%; transform:translateX(calc(-50% + 0.02em)); top:0.30em; width:0.155em; height:0.155em; background:#0E2138; border-radius:0.034em;"></span></span>ndry</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:26px;">
+        <a href="Findry Local SEO.dc.html" class="fd-h" style="font-size:14.5px; color:#12A594; font-weight:600; white-space:nowrap;">{{ t.navLocalSeo }}</a>
+        <a href="Findry Case Studies.dc.html" class="fd-h" style="font-size:14.5px; color:#3A4150; font-weight:500; white-space:nowrap;" style-hover="color:#12A594;">{{ t.navCases }}</a>
+        <a href="Findry Pricing.dc.html" class="fd-h" style="font-size:14.5px; color:#3A4150; font-weight:500; white-space:nowrap;" style-hover="color:#12A594;">{{ t.navPricing }}</a>
+        <div style="display:flex; align-items:center; background:#F1F2F4; border-radius:999px; padding:3px;">
+          <button onClick="{{ setEn }}" style="{{ enStyle }}">EN</button>
+          <button onClick="{{ setUr }}" style="{{ urStyle }}">اردو</button>
+        </div>
+        <a href="Findry Book a Call.dc.html" class="fd-h" style="font-size:14.5px; color:#fff; font-weight:600; background:#0E2138; padding:11px 19px; border-radius:9px; white-space:nowrap;" style-hover="background:#16304f;">{{ t.bookCall }}</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section style="padding:72px 0 64px; background:linear-gradient(180deg,#FFFFFF,#F6F7F9);">
+    <div style="max-width:820px; margin:0 auto; padding:0 40px;" data-reveal>
+      <span class="fd-h" style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; color:#12A594; background:#E2F4F1; padding:7px 13px; border-radius:999px; white-space:nowrap;">{{ t.navLocalSeo }}</span>
+      <h1 class="fd-h" style="margin:22px 0 0; font-size:54px; line-height:1.04; font-weight:700; letter-spacing:-0.03em; max-width:18ch;">{{ t.heroHeadline }}</h1>
+      <p class="fd-prose" style="margin:20px 0 0; font-size:18px; line-height:1.6; color:#5C6470; max-width:60ch;">{{ t.heroSub }}</p>
+      <div style="margin-top:30px;"><a href="Findry Book a Call.dc.html" class="fd-h" style="display:inline-block; font-size:15.5px; font-weight:600; color:#fff; background:#0E2138; padding:15px 26px; border-radius:10px;" style-hover="background:#16304f;">{{ t.bookCall }}</a></div>
+    </div>
+  </section>
+
+  <!-- WHAT IT IS -->
+  <section style="background:#fff; padding:84px 0;">
+    <div style="max-width:1160px; margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+      <div data-reveal>
+        <span class="fd-h" style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; color:#12A594; background:#E2F4F1; padding:7px 13px; border-radius:999px; white-space:nowrap;">{{ t.plainEyebrow }}</span>
+        <h2 class="fd-h" style="margin:20px 0 0; font-size:36px; line-height:1.12; font-weight:700; letter-spacing:-0.025em;">{{ t.plainHeadline }}</h2>
+        <p class="fd-prose" style="margin:18px 0 0; font-size:17px; line-height:1.65; color:#5C6470;">{{ t.plainBody }}</p>
+      </div>
+      <div data-reveal style="background:#F6F7F9; border:1px solid #EAEBEE; border-radius:18px; padding:30px;">
+        <div class="fd-prose" style="font-size:13px; font-weight:600; letter-spacing:0.06em; color:#7A8190; text-transform:uppercase; margin-bottom:18px;">{{ t.whereLabel }}</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; gap:13px; align-items:center;"><span style="width:32px; height:32px; border-radius:8px; background:#E2F4F1; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#12A594" stroke-width="2"></circle><path d="M16 16l5 5" stroke="#12A594" stroke-width="2" stroke-linecap="round"></path></svg></span><span class="fd-prose" style="font-size:15px; color:#0E2138;">{{ t.where1 }}</span></div>
+          <div style="display:flex; gap:13px; align-items:center;"><span style="width:32px; height:32px; border-radius:8px; background:#E2F4F1; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><svg width="15" height="17" viewBox="0 0 24 28" fill="none"><path d="M12 2C7 2 3 6 3 11c0 6 9 14 9 14s9-8 9-14c0-5-4-9-9-9z" stroke="#12A594" stroke-width="2" stroke-linejoin="round"></path><circle cx="12" cy="11" r="3" fill="#12A594"></circle></svg></span><span class="fd-prose" style="font-size:15px; color:#0E2138;">{{ t.where2 }}</span></div>
+          <div style="display:flex; gap:13px; align-items:center;"><span style="width:32px; height:32px; border-radius:8px; background:#E2F4F1; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="4" rx="1.5" stroke="#12A594" stroke-width="2"></rect><rect x="3" y="14" width="18" height="4" rx="1.5" stroke="#12A594" stroke-width="2"></rect></svg></span><span class="fd-prose" style="font-size:15px; color:#0E2138;">{{ t.where3 }}</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE SET UP -->
+  <section style="background:#F6F7F9; padding:90px 0;">
+    <div style="max-width:1160px; margin:0 auto; padding:0 40px;">
+      <div data-reveal style="max-width:620px;">
+        <span class="fd-h" style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; color:#12A594; background:#E2F4F1; padding:7px 13px; border-radius:999px; white-space:nowrap;">{{ t.setupEyebrow }}</span>
+        <h2 class="fd-h" style="margin:20px 0 0; font-size:38px; line-height:1.1; font-weight:700; letter-spacing:-0.025em;">{{ t.setupHeadline }}</h2>
+        <p class="fd-prose" style="margin:16px 0 0; font-size:17px; line-height:1.6; color:#5C6470;">{{ t.setupSub }}</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:44px;">
+        <div data-reveal style="background:#fff; border:1px solid #E4E5E8; border-radius:18px; padding:32px;">
+          <div class="fd-num" style="font-size:13px; font-weight:700; color:#12A594;">01</div>
+          <h3 class="fd-h" style="margin:10px 0 0; font-size:21px; font-weight:600;">{{ t.set1Title }}</h3>
+          <p class="fd-prose" style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#5C6470;">{{ t.set1Body }}</p>
+        </div>
+        <div data-reveal style="background:#fff; border:1px solid #E4E5E8; border-radius:18px; padding:32px;">
+          <div class="fd-num" style="font-size:13px; font-weight:700; color:#12A594;">02</div>
+          <h3 class="fd-h" style="margin:10px 0 0; font-size:21px; font-weight:600;">{{ t.set2Title }}</h3>
+          <p class="fd-prose" style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#5C6470;">{{ t.set2Body }}</p>
+        </div>
+        <div data-reveal style="background:#fff; border:1px solid #E4E5E8; border-radius:18px; padding:32px;">
+          <div class="fd-num" style="font-size:13px; font-weight:700; color:#12A594;">03</div>
+          <h3 class="fd-h" style="margin:10px 0 0; font-size:21px; font-weight:600;">{{ t.set3Title }}</h3>
+          <p class="fd-prose" style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#5C6470;">{{ t.set3Body }}</p>
+        </div>
+        <div data-reveal style="background:#fff; border:1px solid #E4E5E8; border-radius:18px; padding:32px;">
+          <div class="fd-num" style="font-size:13px; font-weight:700; color:#12A594;">04</div>
+          <h3 class="fd-h" style="margin:10px 0 0; font-size:21px; font-weight:600;">{{ t.set4Title }}</h3>
+          <p class="fd-prose" style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#5C6470;">{{ t.set4Body }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONGOING -->
+  <section style="background:#fff; padding:90px 0;">
+    <div style="max-width:1160px; margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+      <div data-reveal>
+        <span class="fd-h" style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; color:#12A594; background:#E2F4F1; padding:7px 13px; border-radius:999px; white-space:nowrap;">{{ t.ongoingEyebrow }}</span>
+        <h2 class="fd-h" style="margin:20px 0 0; font-size:38px; line-height:1.1; font-weight:700; letter-spacing:-0.025em;">{{ t.ongoingHeadline }}</h2>
+        <p class="fd-prose" style="margin:18px 0 0; font-size:17px; line-height:1.65; color:#5C6470;">{{ t.ongoingBody }}</p>
+        <div style="margin-top:26px;"><a href="Findry Book a Call.dc.html" class="fd-h" style="display:inline-block; font-size:15.5px; font-weight:600; color:#0E2138; background:#fff; border:1px solid #D7DAE0; padding:14px 24px; border-radius:10px;" style-hover="border-color:#12A594; color:#12A594;">{{ t.ongoingCta }}</a></div>
+      </div>
+      <div data-reveal style="display:flex; flex-direction:column; gap:12px;">
+        <div style="display:flex; align-items:center; gap:14px; background:#F6F7F9; border:1px solid #EAEBEE; border-radius:14px; padding:18px 20px;"><span style="color:#12A594; font-size:18px; flex-shrink:0;">✓</span><span class="fd-prose" style="font-size:15px; color:#0E2138;">{{ t.ong1 }}</span></div>
+        <div style="display:flex; align-items:center; gap:14px; background:#F6F7F9; border:1px solid #EAEBEE; border-radius:14px; padding:18px 20px;"><span style="color:#12A594; font-size:18px; flex-shrink:0;">✓</span><span class="fd-prose" style="font-size:15px; color:#0E2138;">{{ t.ong2 }}</span></div>
+        <div style="display:flex; align-items:center; gap:14px; background:#F6F7F9; border:1px solid #EAEBEE; border-radius:14px; padding:18px 20px;"><span style="color:#12A594; font-size:18px; flex-shrink:0;">✓</span><span class="fd-prose" style="font-size:15px; color:#0E2138;">{{ t.ong3 }}</span></div>
+        <div style="display:flex; align-items:center; gap:14px; background:#F6F7F9; border:1px solid #EAEBEE; border-radius:14px; padding:18px 20px;"><span style="color:#12A594; font-size:18px; flex-shrink:0;">✓</span><span class="fd-prose" style="font-size:15px; color:#0E2138;">{{ t.ong4 }}</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS TIMELINE -->
+  <section style="background:#0E2138; padding:90px 0; color:#fff;">
+    <div style="max-width:1160px; margin:0 auto; padding:0 40px;">
+      <div data-reveal style="max-width:620px;">
+        <span class="fd-h" style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; color:#1FC9B0; background:rgba(31,201,176,0.13); padding:7px 13px; border-radius:999px; white-space:nowrap;">{{ t.timelineEyebrow }}</span>
+        <h2 class="fd-h" style="margin:20px 0 0; font-size:38px; line-height:1.1; font-weight:700; letter-spacing:-0.025em; color:#fff;">{{ t.timelineHeadline }}</h2>
+        <p class="fd-prose" style="margin:16px 0 0; font-size:17px; line-height:1.6; color:#C4CBD6;">{{ t.timelineSub }}</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:44px;">
+        <div data-reveal style="background:#16304f; border:1px solid #25415f; border-radius:18px; padding:30px;">
+          <div class="fd-num" style="font-size:13px; font-weight:700; color:#1FC9B0; letter-spacing:0.04em;">{{ t.tl1Label }}</div>
+          <h3 class="fd-h" style="margin:12px 0 0; font-size:20px; font-weight:600; color:#fff;">{{ t.tl1Title }}</h3>
+          <p class="fd-prose" style="margin:10px 0 0; font-size:14.5px; line-height:1.6; color:#C4CBD6;">{{ t.tl1Body }}</p>
+        </div>
+        <div data-reveal style="background:#16304f; border:1px solid #25415f; border-radius:18px; padding:30px;">
+          <div class="fd-num" style="font-size:13px; font-weight:700; color:#1FC9B0; letter-spacing:0.04em;">{{ t.tl2Label }}</div>
+          <h3 class="fd-h" style="margin:12px 0 0; font-size:20px; font-weight:600; color:#fff;">{{ t.tl2Title }}</h3>
+          <p class="fd-prose" style="margin:10px 0 0; font-size:14.5px; line-height:1.6; color:#C4CBD6;">{{ t.tl2Body }}</p>
+        </div>
+        <div data-reveal style="background:#16304f; border:1px solid #25415f; border-radius:18px; padding:30px;">
+          <div class="fd-num" style="font-size:13px; font-weight:700; color:#1FC9B0; letter-spacing:0.04em;">{{ t.tl3Label }}</div>
+          <h3 class="fd-h" style="margin:12px 0 0; font-size:20px; font-weight:600; color:#fff;">{{ t.tl3Title }}</h3>
+          <p class="fd-prose" style="margin:10px 0 0; font-size:14.5px; line-height:1.6; color:#C4CBD6;">{{ t.tl3Body }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:#fff; padding:90px 0;">
+    <div style="max-width:820px; margin:0 auto; padding:0 40px;">
+      <div data-reveal style="text-align:center; margin-bottom:40px;">
+        <span class="fd-h" style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; color:#12A594; background:#E2F4F1; padding:7px 13px; border-radius:999px; white-space:nowrap;">{{ t.faqEyebrow }}</span>
+        <h2 class="fd-h" style="margin:20px 0 0; font-size:38px; line-height:1.1; font-weight:700; letter-spacing:-0.025em;">{{ t.faqHeadline }}</h2>
+      </div>
+      <div data-reveal style="border-top:1px solid #EAEBEE;">
+        <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="5">
+          <div style="border-bottom:1px solid #EAEBEE;">
+            <button onClick="{{ item.toggle }}" style="width:100%; background:none; border:none; cursor:pointer; text-align:start; padding:22px 0; display:flex; align-items:center; justify-content:space-between; gap:20px;">
+              <span class="fd-h" style="font-size:18px; font-weight:600; color:#0E2138;">{{ item.q }}</span>
+              <span class="fd-num" style="font-size:22px; color:#12A594; flex-shrink:0; line-height:1;">{{ item.sign }}</span>
+            </button>
+            <sc-if value="{{ item.open }}" hint-placeholder-val="{{ false }}">
+              <p class="fd-prose" style="margin:0; padding:0 0 24px; font-size:16px; line-height:1.65; color:#5C6470; max-width:64ch;">{{ item.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section style="background:#F6F7F9; padding:0 0 90px;">
+    <div style="max-width:1160px; margin:0 auto; padding:60px 40px 0;">
+      <div data-reveal style="position:relative; overflow:hidden; background:#0E2138; border-radius:24px; padding:64px; text-align:center;">
+        <div style="position:absolute; top:-40px; inset-inline-end:-30px; width:220px; height:220px; background:radial-gradient(circle,rgba(31,201,176,0.18),transparent 70%); border-radius:999px;"></div>
+        <div style="position:relative;">
+          <h2 class="fd-h" style="margin:0; font-size:40px; line-height:1.08; font-weight:700; letter-spacing:-0.025em; color:#fff; max-width:22ch; margin-inline:auto;">{{ t.finalHeadline }}</h2>
+          <p class="fd-prose" style="margin:16px auto 0; font-size:17px; color:#C4CBD6; max-width:50ch;">{{ t.finalSub }}</p>
+          <div style="display:flex; gap:14px; justify-content:center; margin-top:30px; flex-wrap:wrap;">
+            <a href="Findry Book a Call.dc.html" class="fd-h" style="font-size:15.5px; font-weight:600; color:#0E2138; background:#fff; padding:15px 28px; border-radius:10px;" style-hover="background:#E2F4F1;">{{ t.bookCall }}</a>
+            <a href="Findry Free Check.dc.html" class="fd-h" style="font-size:15.5px; font-weight:600; color:#fff; background:transparent; border:1px solid rgba(255,255,255,0.3); padding:15px 28px; border-radius:10px;" style-hover="border-color:#1FC9B0; color:#1FC9B0;">{{ t.freeCheck }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0E1116; color:#fff; padding:64px 0 36px;">
+    <div style="max-width:1160px; margin:0 auto; padding:0 40px;">
+      <div style="display:flex; justify-content:space-between; gap:48px; flex-wrap:wrap;">
+        <div style="max-width:320px;">
+          <div style="display:flex; align-items:center; gap:11px;">
+            <svg viewBox="0 0 120 120" width="28" height="28" style="flex-shrink:0;"><rect x="34" y="18" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="34" y="36" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="34" y="54" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="34" y="72" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="34" y="90" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="52" y="18" width="16" height="16" rx="3.5" fill="#fff"></rect><rect x="70" y="18" width="16" height="16" rx="3.5" fill="#1FC9B0"></rect><rect x="52" y="54" width="16" height="16" rx="3.5" fill="#fff"></rect></svg>
+            <span class="fd-num" style="font-family:'Space Grotesk',sans-serif; font-weight:600; letter-spacing:-0.03em; font-size:21px; color:#fff;">F<span style="position:relative; display:inline-block;">ı<span style="position:absolute; left:50%; transform:translateX(calc(-50% + 0.02em)); top:0.30em; width:0.155em; height:0.155em; background:#fff; border-radius:0.034em;"></span></span>ndry</span>
+          </div>
+          <p class="fd-prose" style="margin:16px 0 0; font-size:14px; line-height:1.6; color:#9AA3B5;">{{ t.footerTag }}</p>
+        </div>
+        <div style="display:flex; gap:64px; flex-wrap:wrap;">
+          <div>
+            <div class="fd-prose" style="font-size:12px; font-weight:600; letter-spacing:0.08em; color:#6B7486; text-transform:uppercase; margin-bottom:16px;">{{ t.colServices }}</div>
+            <div style="display:flex; flex-direction:column; gap:11px;">
+              <a href="Findry Local SEO.dc.html" class="fd-h" style="font-size:14px; color:#C4CBD6;" style-hover="color:#1FC9B0;">{{ t.navLocalSeo }}</a>
+              <a href="Findry Case Studies.dc.html" class="fd-h" style="font-size:14px; color:#C4CBD6;" style-hover="color:#1FC9B0;">{{ t.navCases }}</a>
+              <a href="Findry Pricing.dc.html" class="fd-h" style="font-size:14px; color:#C4CBD6;" style-hover="color:#1FC9B0;">{{ t.navPricing }}</a>
+            </div>
+          </div>
+          <div>
+            <div class="fd-prose" style="font-size:12px; font-weight:600; letter-spacing:0.08em; color:#6B7486; text-transform:uppercase; margin-bottom:16px;">{{ t.colStart }}</div>
+            <div style="display:flex; flex-direction:column; gap:11px;">
+              <a href="Findry Book a Call.dc.html" class="fd-h" style="font-size:14px; color:#C4CBD6;" style-hover="color:#1FC9B0;">{{ t.bookCall }}</a>
+              <a href="Findry Free Check.dc.html" class="fd-h" style="font-size:14px; color:#C4CBD6;" style-hover="color:#1FC9B0;">{{ t.freeCheck }}</a>
+            </div>
+          </div>
+          <div>
+            <div class="fd-prose" style="font-size:12px; font-weight:600; letter-spacing:0.08em; color:#6B7486; text-transform:uppercase; margin-bottom:16px;">{{ t.colFollow }}</div>
+            <div style="display:flex; flex-direction:column; gap:11px;">
+              <a href="#" class="fd-h" style="font-size:14px; color:#C4CBD6;" style-hover="color:#1FC9B0;">{{ t.socGbp }}</a>
+              <a href="#" class="fd-num" style="font-size:14px; color:#C4CBD6; font-family:'Space Grotesk',sans-serif;" style-hover="color:#1FC9B0;">LinkedIn</a>
+              <a href="#" class="fd-num" style="font-size:14px; color:#C4CBD6; font-family:'Space Grotesk',sans-serif;" style-hover="color:#1FC9B0;">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px; padding-top:24px; border-top:1px solid #20242B; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <span class="fd-prose" style="font-size:13px; color:#6B7486;"><span class="fd-num" style="font-family:'Space Grotesk',sans-serif;">© 2026 Findry · findry.co</span> · {{ t.cityLine }}</span>
+        <div style="display:flex; gap:24px;">
+          <a href="Findry Privacy.dc.html" class="fd-h" style="font-size:13px; color:#6B7486;" style-hover="color:#C4CBD6;">{{ t.privacy }}</a>
+          <a href="Findry Terms.dc.html" class="fd-h" style="font-size:13px; color:#6B7486;" style-hover="color:#C4CBD6;">{{ t.terms }}</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = {
+    open: 0,
+    lang: (() => { try { return localStorage.getItem('findry-lang') || 'en'; } catch (e) { return 'en'; } })()
+  };
+
+  T = {
+    en: {
+      navLocalSeo: 'Local SEO', navCases: 'Case studies', navPricing: 'Pricing', bookCall: 'Book a call', freeCheck: 'Get a free visibility check',
+      heroHeadline: 'Everything it takes to win "near me" — done for you.',
+      heroSub: "Local SEO is how nearby customers find you on Google instead of a competitor. We handle the whole stack — your Google Business Profile, listings, on-page signals and reviews — and then keep it working month after month.",
+      plainEyebrow: 'IN PLAIN TERMS', plainHeadline: 'What local SEO actually is.',
+      plainBody: 'When someone searches "dentist near me" or "best biryani in Clifton," Google picks a handful of local businesses to show first — on the map and at the top of results. Local SEO is the work that makes Google choose you. No ads, no tricks: just being the most obviously legitimate, well-reviewed, correctly-listed option in your area.',
+      whereLabel: 'Where you show up', where1: 'The "near me" search results', where2: 'The Google Maps local pack', where3: 'Directories & local listings',
+      setupEyebrow: 'THE SETUP', setupHeadline: 'What we set up.', setupSub: 'A one-time foundation that gets the fundamentals right — the things Google checks before deciding to rank you locally.',
+      set1Title: 'Google Business Profile', set1Body: 'Claimed, verified and fully built out — correct categories, services, hours, photos and description that match what people search for.',
+      set2Title: 'Citations & listings', set2Body: 'Your name, address and phone made consistent across every directory Google cross-checks — so nothing contradicts and costs you trust.',
+      set3Title: 'On-page local signals', set3Body: 'Location and service pages, local schema markup, and the right keywords on your site so Search understands where and what you serve.',
+      set4Title: 'Reviews strategy', set4Body: 'A simple, repeatable way to ask happy customers for reviews — the single biggest lever on local ranking and walk-ins.',
+      ongoingEyebrow: 'ONGOING MANAGEMENT', ongoingHeadline: "Rankings don't hold themselves.",
+      ongoingBody: 'Competitors are working too, and Google rewards freshness. Monthly management keeps you moving: regular Google posts, review monitoring and responses, listing fixes, and adjustments based on what\'s actually ranking.',
+      ongoingCta: 'Talk through your plan →',
+      ong1: 'Weekly Google posts & offers', ong2: 'Review monitoring & replies', ong3: 'Listing & profile fixes as they appear', ong4: 'Plain-English monthly reporting',
+      timelineEyebrow: 'HONEST TIMELINES', timelineHeadline: 'What results look like — and when.', timelineSub: "Local SEO compounds. We don't promise overnight #1s — we tell you what's realistic and show the proof each month.",
+      tl1Label: 'WEEKS 1–4', tl1Title: 'Foundation live', tl1Body: 'Profile and listings corrected and verified. You start appearing for more local searches.',
+      tl2Label: 'MONTHS 2–3', tl2Title: 'Movement you can measure', tl2Body: 'Map-pack rankings climb, reviews grow, and calls and direction requests begin to rise.',
+      tl3Label: 'MONTHS 4–6+', tl3Title: 'Holding the top', tl3Body: 'Top-three for your key "near me" terms, with management defending the position.',
+      faqEyebrow: 'FAQ', faqHeadline: 'Questions owners ask us.',
+      finalHeadline: 'See where you rank today — free.', finalSub: "We'll audit your current local visibility and show you exactly what's holding you back. No obligation.",
+      footerTag: 'Visibility, built for local business. We get you found by the customers nearest you — on Search, Maps and listings.',
+      colServices: 'Services', colStart: 'Get started', colFollow: 'Follow', socGbp: 'Google Business', cityLine: 'Karachi, Pakistan', privacy: 'Privacy', terms: 'Terms',
+      faqs: [
+        { q: 'How long until I see results?', a: 'Most clients see more local impressions within the first month as the foundation goes live, with measurable movement in rankings and calls by months two to three. Competitive categories take longer — we set honest expectations after the audit.' },
+        { q: 'Do I need a website to rank?', a: 'A Google Business Profile alone can win the map pack, so you can start without a site. But a simple local website strengthens your on-page signals and gives Google more to trust — we can advise either way.' },
+        { q: "What's not included?", a: "We don't run paid Google or Meta ads as part of these packages, and we don't buy fake reviews — ever. Local SEO is about earning genuine visibility. If paid ads make sense for you, we'll point you in the right direction." },
+        { q: 'Is there a contract or lock-in?', a: 'Setup is a one-time fee. Monthly management is month-to-month — cancel any time with 30 days notice. We earn the retainer by keeping you ranking, not by trapping you.' },
+        { q: 'Do you work outside Karachi?', a: 'Yes. We are Karachi-led but the work travels — we serve local businesses across Pakistan and internationally. The approach is the same wherever your customers are searching.' }
+      ]
+    },
+    ur: {
+      navLocalSeo: 'لوکل ایس ای او', navCases: 'کیس اسٹڈیز', navPricing: 'قیمتیں', bookCall: 'کال بُک کریں', freeCheck: 'مفت جائزہ حاصل کریں',
+      heroHeadline: '"قریب میں" جیتنے کے لیے جو کچھ درکار ہے — سب آپ کے لیے۔',
+      heroSub: 'لوکل ایس ای او وہ طریقہ ہے جس سے قریب کے گاہک کسی حریف کے بجائے گوگل پر آپ کو ڈھونڈتے ہیں۔ ہم پورا نظام سنبھالتے ہیں — آپ کا گوگل بزنس پروفائل، فہرستیں، آن پیج سگنلز اور جائزے — اور پھر اسے ہر ماہ چلتا رکھتے ہیں۔',
+      plainEyebrow: 'آسان الفاظ میں', plainHeadline: 'لوکل ایس ای او اصل میں کیا ہے۔',
+      plainBody: 'جب کوئی "dentist near me" یا "کلفٹن میں بہترین بریانی" تلاش کرتا ہے، تو گوگل چند مقامی کاروبار سب سے پہلے دکھاتا ہے — میپ پر اور نتائج میں سب سے اوپر۔ لوکل ایس ای او وہ کام ہے جو گوگل کو آپ کا انتخاب کرنے پر آمادہ کرتا ہے۔ کوئی اشتہار نہیں، کوئی چال نہیں: بس اپنے علاقے میں سب سے زیادہ مستند، اچھے جائزوں والا اور درست فہرست شدہ آپشن بننا۔',
+      whereLabel: 'آپ کہاں نظر آتے ہیں', where1: '"قریب میں" تلاش کے نتائج', where2: 'گوگل میپس کا لوکل پیک', where3: 'ڈائریکٹریز اور مقامی فہرستیں',
+      setupEyebrow: 'سیٹ اپ', setupHeadline: 'ہم کیا ترتیب دیتے ہیں۔', setupSub: 'ایک بار کی بنیاد جو بنیادی باتیں درست کرتی ہے — وہ چیزیں جو گوگل آپ کو مقامی طور پر نمایاں کرنے سے پہلے جانچتا ہے۔',
+      set1Title: 'گوگل بزنس پروفائل', set1Body: 'کلیم، تصدیق اور مکمل تیار — درست زمرے، خدمات، اوقات، تصاویر اور تفصیل جو لوگوں کی تلاش سے میل کھائے۔',
+      set2Title: 'سائٹیشنز اور فہرستیں', set2Body: 'آپ کا نام، پتہ اور فون ہر اُس ڈائریکٹری پر یکساں جسے گوگل جانچتا ہے — تاکہ کوئی تضاد آپ کے بھروسے کو نقصان نہ پہنچائے۔',
+      set3Title: 'آن پیج مقامی سگنلز', set3Body: 'لوکیشن اور سروس صفحات، مقامی اسکیما مارک اپ، اور آپ کی سائٹ پر درست کی ورڈز تاکہ سرچ سمجھے کہ آپ کہاں اور کیا خدمت دیتے ہیں۔',
+      set4Title: 'جائزوں کی حکمتِ عملی', set4Body: 'خوش گاہکوں سے جائزے مانگنے کا آسان، بار بار قابلِ استعمال طریقہ — مقامی پوزیشن اور واک اِنز پر سب سے بڑا اثر۔',
+      ongoingEyebrow: 'مسلسل نگہداشت', ongoingHeadline: 'پوزیشنیں خود برقرار نہیں رہتیں۔',
+      ongoingBody: 'حریف بھی محنت کر رہے ہیں، اور گوگل تازگی کو انعام دیتا ہے۔ ماہانہ نگہداشت آپ کو آگے رکھتی ہے: باقاعدہ گوگل پوسٹس، جائزوں کی نگرانی اور جوابات، فہرست کی درستی، اور جو واقعی نمایاں ہو رہا ہے اس کی بنیاد پر بہتری۔',
+      ongoingCta: 'اپنے پلان پر بات کریں ←',
+      ong1: 'ہفتہ وار گوگل پوسٹس اور آفرز', ong2: 'جائزوں کی نگرانی اور جوابات', ong3: 'فہرست اور پروفائل کی درستی جیسے ہی سامنے آئے', ong4: 'ہر ماہ آسان زبان میں رپورٹنگ',
+      timelineEyebrow: 'سچی مدتیں', timelineHeadline: 'نتائج کیسے اور کب نظر آتے ہیں۔', timelineSub: 'لوکل ایس ای او وقت کے ساتھ بڑھتا ہے۔ ہم راتوں رات پہلی پوزیشن کا وعدہ نہیں کرتے — ہم حقیقت بتاتے ہیں اور ہر ماہ ثبوت دکھاتے ہیں۔',
+      tl1Label: 'ہفتے 1–4', tl1Title: 'بنیاد فعال', tl1Body: 'پروفائل اور فہرستیں درست اور تصدیق شدہ۔ آپ مزید مقامی تلاش میں نظر آنے لگتے ہیں۔',
+      tl2Label: 'مہینے 2–3', tl2Title: 'قابلِ پیمائش تبدیلی', tl2Body: 'میپ پیک پوزیشن بڑھتی ہے، جائزے بڑھتے ہیں، اور کالیں اور سمت کی درخواستیں اوپر جانے لگتی ہیں۔',
+      tl3Label: 'مہینے 4–6+', tl3Title: 'سرفہرست رہنا', tl3Body: 'آپ کی اہم "قریب میں" اصطلاحات پر ٹاپ تھری، نگہداشت پوزیشن کا دفاع کرتی ہے۔',
+      faqEyebrow: 'سوالات', faqHeadline: 'مالکان جو سوال پوچھتے ہیں۔',
+      finalHeadline: 'دیکھیں آج آپ کہاں ہیں — مفت۔', finalSub: 'ہم آپ کی موجودہ مقامی نمایاں موجودگی کا جائزہ لیں گے اور بالکل دکھائیں گے کہ کیا رکاوٹ ہے۔ کوئی پابندی نہیں۔',
+      footerTag: 'نمایاں رہیں — مقامی کاروبار کے لیے بنایا گیا۔ ہم آپ کو آپ کے قریب ترین گاہکوں تک پہنچاتے ہیں — سرچ، میپس اور فہرستوں پر۔',
+      colServices: 'خدمات', colStart: 'آغاز کریں', colFollow: 'فالو کریں', socGbp: 'گوگل بزنس', cityLine: 'کراچی، پاکستان', privacy: 'پرائیویسی', terms: 'شرائط',
+      faqs: [
+        { q: 'نتائج کتنی دیر میں نظر آئیں گے؟', a: 'زیادہ تر گاہکوں کو پہلے ماہ میں ہی زیادہ مقامی امپریشنز ملنے لگتے ہیں جیسے ہی بنیاد فعال ہوتی ہے، اور دوسرے سے تیسرے ماہ تک پوزیشن اور کالوں میں قابلِ پیمائش تبدیلی۔ مقابلے والے شعبے زیادہ وقت لیتے ہیں — آڈٹ کے بعد ہم سچی توقعات طے کرتے ہیں۔' },
+        { q: 'کیا پوزیشن کے لیے ویب سائٹ ضروری ہے؟', a: 'صرف گوگل بزنس پروفائل بھی میپ پیک جیت سکتا ہے، تو آپ بغیر سائٹ کے شروع کر سکتے ہیں۔ لیکن ایک سادہ مقامی ویب سائٹ آپ کے آن پیج سگنلز مضبوط کرتی ہے اور گوگل کو زیادہ بھروسہ دیتی ہے — ہم دونوں صورتوں میں مشورہ دے سکتے ہیں۔' },
+        { q: 'کیا شامل نہیں؟', a: 'ہم ان پیکجز میں پیڈ گوگل یا میٹا اشتہارات نہیں چلاتے، اور جعلی جائزے کبھی نہیں خریدتے۔ لوکل ایس ای او اصل نمایاں موجودگی کمانے کے بارے میں ہے۔ اگر پیڈ ایڈز آپ کے لیے مناسب ہوں تو ہم درست سمت بتا دیں گے۔' },
+        { q: 'کیا کوئی معاہدہ یا پابندی ہے؟', a: 'سیٹ اپ ایک بار کی فیس ہے۔ ماہانہ نگہداشت ماہ بہ ماہ ہے — 30 دن کے نوٹس پر کسی بھی وقت منسوخ کریں۔ ہم آپ کو نمایاں رکھ کر فیس کماتے ہیں، پھنسا کر نہیں۔' },
+        { q: 'کیا آپ کراچی سے باہر کام کرتے ہیں؟', a: 'جی ہاں۔ ہم کراچی سے ہیں مگر یہ کام ہر جگہ چلتا ہے — ہم پاکستان بھر اور بین الاقوامی سطح پر مقامی کاروبار کی خدمت کرتے ہیں۔ طریقہ وہی رہتا ہے، چاہے آپ کے گاہک کہیں بھی تلاش کر رہے ہوں۔' }
+      ]
+    }
+  };
+
+  setLang(lang) { if (window.FindryI18n) window.FindryI18n.setLang(lang); this.setState({ lang }); }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const t = this.T[lang] || this.T.en;
+    const isUr = lang === 'ur';
+    const langBtn = { border: 'none', cursor: 'pointer', fontSize: '12.5px', fontWeight: 600, padding: '6px 13px', borderRadius: '999px', transition: 'all .2s' };
+    return {
+      t, dir: isUr ? 'rtl' : 'ltr', lang,
+      setEn: () => this.setLang('en'), setUr: () => this.setLang('ur'),
+      enStyle: !isUr ? { ...langBtn, background: '#fff', color: '#0E2138', boxShadow: '0 1px 2px rgba(14,33,56,0.12)' } : { ...langBtn, background: 'transparent', color: '#6A7180' },
+      urStyle: isUr ? { ...langBtn, background: '#fff', color: '#0E2138', boxShadow: '0 1px 2px rgba(14,33,56,0.12)', fontFamily: "'Noto Naskh Arabic', sans-serif" } : { ...langBtn, background: 'transparent', color: '#6A7180', fontFamily: "'Noto Naskh Arabic', sans-serif" },
+      faqs: t.faqs.map((f, i) => ({
+        q: f.q, a: f.a, open: this.state.open === i, sign: this.state.open === i ? '–' : '+',
+        toggle: () => this.setState((s) => ({ open: s.open === i ? -1 : i }))
+      })),
+      navRef: (el) => { this._nav = el; }
+    };
+  }
+
+  componentDidMount() {
+    if (window.FindryI18n) { window.FindryI18n.applyDoc(this.state.lang); if (this.state.lang === 'ur') window.FindryI18n.ensureUrduFonts(); }
+    const onScroll = () => { if (this._nav) this._nav.style.boxShadow = window.scrollY > 8 ? '0 6px 24px -10px rgba(14,33,56,0.18)' : 'none'; };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    this._onScroll = onScroll; onScroll();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    const reveal = () => {
+      document.querySelectorAll('[data-reveal]').forEach((el) => {
+        if (el.dataset.revealInit) return;
+        el.dataset.revealInit = '1';
+        el.style.opacity = '0'; el.style.transform = 'translateY(18px)';
+        el.style.transition = 'opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)';
+        io.observe(el);
+      });
+    };
+    reveal(); this._reveal = reveal;
+  }
+  componentDidUpdate() { if (this._reveal) this._reveal(); }
+  componentWillUnmount() { if (this._onScroll) window.removeEventListener('scroll', this._onScroll); }
+}
+</script>
+</body>
+</html>

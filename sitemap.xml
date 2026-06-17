@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://findry.co/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://findry.co/ur/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Local SEO -->
+  <url>
+    <loc>https://findry.co/en/local-seo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/local-seo/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/local-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/local-seo/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://findry.co/ur/local-seo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/local-seo/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/local-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/local-seo/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Pricing -->
+  <url>
+    <loc>https://findry.co/en/pricing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/pricing/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://findry.co/ur/pricing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/pricing/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Free Visibility Check -->
+  <url>
+    <loc>https://findry.co/en/free-check/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/free-check/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/free-check/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/free-check/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://findry.co/ur/free-check/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/free-check/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/free-check/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/free-check/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Book a Call -->
+  <url>
+    <loc>https://findry.co/en/book-a-call/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/book-a-call/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/book-a-call/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/book-a-call/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://findry.co/ur/book-a-call/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/book-a-call/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/book-a-call/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/book-a-call/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Case Studies -->
+  <url>
+    <loc>https://findry.co/en/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/case-studies/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://findry.co/ur/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/case-studies/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Case Study: Karachi Grill House -->
+  <url>
+    <loc>https://findry.co/en/case-studies/karachi-grill-house/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/case-studies/karachi-grill-house/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/case-studies/karachi-grill-house/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/case-studies/karachi-grill-house/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://findry.co/ur/case-studies/karachi-grill-house/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/case-studies/karachi-grill-house/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/case-studies/karachi-grill-house/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/case-studies/karachi-grill-house/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Privacy -->
+  <url>
+    <loc>https://findry.co/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/privacy/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://findry.co/ur/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/privacy/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms -->
+  <url>
+    <loc>https://findry.co/en/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/terms/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://findry.co/ur/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findry.co/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://findry.co/ur/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findry.co/en/terms/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
